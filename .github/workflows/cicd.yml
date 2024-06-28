@@ -24,7 +24,7 @@ jobs:
       - name: Create SSH Key Files
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.EC2_SSH_PRIVATE_KEY }}" > ~/.ssh/my-key-pair.pem
+          echo "${{ secrets.EC2_PRIVATE_KEY }}" > ~/.ssh/my-key-pair.pem
           echo "${{ secrets.EC2_SSH_PUBLIC_KEY }}" > ~/.ssh/my-key-pair.pub
           chmod 600 ~/.ssh/my-key-pair.pem
 
