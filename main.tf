@@ -49,13 +49,13 @@ resource "aws_instance" "react_app" {
       "sudo yum update -y",
       "sudo yum install docker -y",
       "sudo service docker start",
-      "sudo usermod -a -G docker ec2-user",
+      "sudo usermod -a -G docker ubuntu",
       "docker --version"
     ]
 
     connection {
       type        = "ssh"
-      user        = "ec2-user"
+      user        = "ubuntu"
       private_key = file("~/.ssh/my-key-pair.pem")
       host        = self.public_ip
     }
