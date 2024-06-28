@@ -21,6 +21,12 @@ jobs:
         with:
           terraform_version: 1.0.0
 
+      - name: Create SSH Key Files
+        run: |
+          echo "${{ secrets.EC2_SSH_PRIVATE_KEY }}" > ~/.ssh/my-key-pair.pem
+          echo "${{ secrets.EC2_SSH_PUBLIC_KEY }}" > ~/.ssh/my-key-pair.pub
+          chmod 400 ~/.ssh/my-key-pair.pem
+
       - name: Terraform Init
         run: terraform init
       

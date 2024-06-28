@@ -4,7 +4,7 @@ provider "aws" {
 
 resource "aws_key_pair" "deployer" {
   key_name = "deployer-key"
-  public_key = file("my-key-pair.pub")
+  public_key = file("~/.ssh/my-key-pair.pub")
 }
 
 resource "aws_security_group" "allow_ssh_http" {
@@ -56,7 +56,7 @@ resource "aws_instance" "react_app" {
     connection {
       type        = "ssh"
       user        = "ec2-user"
-      private_key = file("reactjs.pem")
+      private_key = file("~/.ssh/my-key-pair.pem")
       host        = self.public_ip
     }
   }
