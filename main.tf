@@ -54,6 +54,7 @@ resource "aws_instance" "react_app" {
     ]
 
     connection {
+      agent       = "false"
       type        = "ssh"
       user        = "ubuntu"
       private_key = file("~/.ssh/my-key-pair.pem")
