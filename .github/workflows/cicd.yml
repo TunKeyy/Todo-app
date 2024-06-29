@@ -8,10 +8,6 @@ on:
 jobs:
   terraform:
     runs-on: ubuntu-latest
-    env:
-      AWS_ACCESS_KEY_ID: ${{ secrets.TF_USER_AWS_KEY }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.TF_USER_AWS_SECRET }}
-      AWS_REGION: ${{ secrets.AWS_REGION }}
     steps:
       - name: Checkout Source
         uses: actions/checkout@v3
