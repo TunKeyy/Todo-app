@@ -43,7 +43,7 @@ jobs:
           REGISTRY: ${{ secrets.DOCKER_USERNAME }}
           REPOSITORY: aws-deploy
           IMAGE_TAG: ${{ github.sha }}
-          AWS_DEFAULT_REGION: ap-south-1
+          AWS_DEFAULT_REGION: ap-southeast-1
         uses: appleboy/ssh-action@master
         with:
           host: ${{ env.SERVER_PUBLIC_IP}}
