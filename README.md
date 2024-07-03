@@ -1,8 +1,8 @@
+# Diagram for using Terraform and GitHub Actions to CI/CD:
+![image](https://github.com/TunKeyy/Todo-app/assets/154872521/ed3aae36-cdeb-4eb2-b8ad-4ed1afa86365)
+
+
 # Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
 
 In the project directory, you can run:
 
